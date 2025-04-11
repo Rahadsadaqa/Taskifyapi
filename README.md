@@ -28,3 +28,35 @@ public class TodoTask {
     public TaskDetail TaskDetail { get; set; } // One-to-One
     public ICollection<UserTask> UserTasks { get; set; } // One-to-Many
 }
+TaskDetail
+Represents additional details for each task, like extra notes.
+public class TaskDetail
+{
+    public int Id { get; set; }
+    public string ExtraNotes { get; set; }
+
+    public int TaskId { get; set; }
+    public TodoTask Task { get; set; }
+}
+User
+Represents the users who can be assigned tasks.
+public class User
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public ICollection<UserTask> UserTasks { get; set; } // Many-to-Many
+}
+UserTask
+Represents the task assigned to a user.
+public class UserTask
+{
+    public int Id { get; set; }
+    public int UserId { get; set; } // Refers to the User's ID
+    public int TaskId { get; set; } // Refers to the Task's ID
+
+    public TodoTask Task { get; set; }
+    public User User { get; set; } // Refers to the User
+}
+
+
+
