@@ -1,17 +1,19 @@
 # Taskify API
 
-Taskify is a simple and extensible **ASP.NET Core Web API** designed for managing tasks and assigning them to users.  
-The API supports task creation, assignment, details tracking, and user-task relationships.
+Taskify is a simple and extensible **ASP.NET Core Web API** designed for managing tasks and assigning them to users. The API supports task creation, assignment, details tracking, and user-task relationships.
 
 ## 📌 Features
-
 - Create and manage tasks (`TodoTask`)
 - Add extra notes to each task (`TaskDetail`)
 - Assign tasks to users (`UserTask`)
 - Support for one-to-one, one-to-many, and many-to-many relationships
 - Ready for expansion with authentication, database integration, and front-end support
 
----
+## 🚀 Setup and Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/Taskifyapi.git
 
 ## 🧩 Data Models
 
@@ -57,11 +59,6 @@ public class UserTask
     public TodoTask Task { get; set; }
     public User User { get; set; } // Refers to the User
 }
-🛠️ Future Enhancements
-Add authentication (JWT, OAuth, etc.)
 
-Integrate with a real database (SQL Server, MongoDB, etc.)
-
-Develop a front-end interface (React, Angular, etc.)
 
 
