@@ -57,6 +57,11 @@ public class UserTask
     public TodoTask Task { get; set; }
     public User User { get; set; } // Refers to the User
 }
+🛠️ Future Enhancements
+Add authentication (JWT, OAuth, etc.)
 
+Integrate with a real database (SQL Server, MongoDB, etc.)
+
+Develop a front-end interface (React, Angular, etc.)
 
 
